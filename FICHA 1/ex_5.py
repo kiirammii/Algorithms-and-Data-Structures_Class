@@ -8,5 +8,5 @@ resto = tempo % 3600
 minutos = int(resto / 60)
 segundos = resto % 60
 
-#imprime o tempo em horas minutos e segundos
+#imprime
 print(horas, "h", minutos, "m", segundos, "s")
