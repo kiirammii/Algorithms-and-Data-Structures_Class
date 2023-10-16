@@ -11,3 +11,5 @@ else:
             print("o numero", number, "é primo")
             break
     
+
+#numero 2 não printa
