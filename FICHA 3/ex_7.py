@@ -1,15 +1,18 @@
 number = int(input("numero: "))
+isPrime = True
 
 if number <= 1:
     print('inválido')
+elif number == 2:
+    print("o numero", number, "é primo")
 else:
     for i in range (2, number):
         if number % i == 0:
-            print ("o numero", number, "não é primo")
+            isPrime = False
             break
         else:
-            print("o numero", number, "é primo")
             break
-    
 
-#numero 2 não printa
+    if isPrime:
+        print ("o numero", number, "é primo")
+    else: print ("o numero", number, "não é primo")
