@@ -1,9 +1,11 @@
 quantidade = int(input("quantos números na sequência?: "))
-primeiro_termo = 0
-segundo_termo = 1
+antepenultimo = 0
+penultimo = 1
 
 if quantidade == 0:
     print("inválido")
 elif quantidade == 1:
-    print(primeiro_termo)
+    print(antepenultimo)
+elif quantidade == 2:
+    print(penultimo)
 else:
