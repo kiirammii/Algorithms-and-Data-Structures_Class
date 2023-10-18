@@ -1,4 +1,4 @@
-import random
+import random #biblioteca random
 
 answer = 'Y'
 

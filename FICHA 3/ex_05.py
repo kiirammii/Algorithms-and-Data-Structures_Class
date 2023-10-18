@@ -1,4 +1,4 @@
-import random
+import random #biblioteca random
 
 answer = 'Y' # resposta para "começar denovo" é verdadeira por defeito
 
