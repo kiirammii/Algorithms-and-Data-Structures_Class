@@ -1,12 +1,14 @@
 quantidade = int(input("quantos números pretende inserir?: "))
+maior = 0
 segundo_maior = 0
 
 if quantidade <= 0:
     print("inválida")
 else:
-    for i in range (1, quantidade+1):
+    for i in range (quantidade):
         number = int(input("número: "))
-        if number < maior and number > segundo_maior:
-            segundo_maior = number
+        if number > maior:
+            segundo_maior = maior
+            maior = number
 
 print(segundo_maior)
