@@ -1,16 +1,21 @@
 def reverseWords(text):
-    reversedText = ''
+    reversedText = '' #armazena as palavras ao contrário
+    word = '' #construir cada palavra ao contrário
+    wordStarted = False #indica se a palavra está a ser contruida
 
-    posX = 0
-    counter = text.count(' ')
+    for char in text:
+        if char != ' ':
+            word += char
+            wordStarted = True
+        elif wordStarted:
+            reversedText = word + ' ' + reversedText
+            word = ""
+            wordStarted = False
 
-    for i in range (1, counter):
-        pos = text.rfind(' ', posX)
-        reversedText = reversedText + text[pos:]
-        text = text[0:pos-1]
-        posX = pos+1
+    if wordStarted:
+        reversedText = word + ' ' + reversedText
 
     return reversedText
 
-text = input('insira um texto: ')
+text = "This is an AED test"
 print(reverseWords(text))

@@ -1,5 +1,9 @@
 def removeSpaces(frase):
-    frase = frase.replace('  ',' ', -1)
+    counter = frase.count(' ')
+
+    for i in range (counter):
+        frase = frase.replace('  ',' ')
+
     print(frase)
 
 frase = input('Insira uma frase: ')
