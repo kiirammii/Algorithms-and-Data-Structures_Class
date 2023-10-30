@@ -1,12 +1,14 @@
 def shortName(nome):
-    espaco1 = nome.find(' ')
-    espaco2 = nome.rfind(' ')
+    """esta função, dado um nome completo, escreve apenas o primeiro e ultimo nome"""
 
-    primeiroNome = nome[0:espaco1]
-    ultimoNome = nome[espaco2:]
-    nomeCurto = primeiroNome + ultimoNome
+    espaco1 = nome.find(' ') # procura o primeiro espaço
+    espaco2 = nome.rfind(' ') # procura o ultimo espaço
 
-    return nomeCurto
+    primeiroNome = nome[0:espaco1] # primeiro nome é desde o inicio até ao primeiro espaço (exclusive)
+    ultimoNome = nome[espaco2:] # ultima nome é desde o ultimo espaço até ao fim (inclusive)
+    nomeCurto = primeiroNome + ultimoNome # coloca ambos os nomes na string
+
+    return nomeCurto # devolve o nome curto
     
-nome = input('Insira um nome: ')
-print(shortName(nome))
+nome = input('Insira um nome: ') # recolhe o nome completo
+print(shortName(nome)) # chama a função e imprime 

@@ -1,10 +1,12 @@
 def removeSpaces(frase):
-    counter = frase.count(' ')
+    """esta função remove os espaços a mais de uma frase"""
 
-    for i in range (counter):
-        frase = frase.replace('  ',' ')
+    counter = frase.count(' ') # conta o número de espaços na frase
 
-    print(frase)
+    for i in range (counter-1): # repete um ciclo n vezes equivalente à quantidade de espaços na frase
+        frase = frase.replace('  ',' ') # substitui os espaços duplos na frase por um unico espaço
 
-frase = input('Insira uma frase: ')
-removeSpaces(frase)
+    print(frase) # imprime a frase sem os espaços a mais
+
+frase = input('Insira uma frase: ') # recolhe a frase
+removeSpaces(frase) # chama a função com a frase como parâmetro
