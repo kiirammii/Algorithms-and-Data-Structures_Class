@@ -1,22 +1,24 @@
 def standardName(nome):
-    espaco1 = nome.find(' ')
-    espaco2 = nome.rfind(' ')
-    
-    primeiroNome = nome[0:espaco1]
-    ultimoNome = nome[espaco2+1:]
+    """esta função recebe um nome completo e substitui os nomes do meio pela sua inicial"""
 
-    nomeStandard = primeiroNome + ' '
+    espaco1 = nome.find(' ') # procura o primeiro espaço
+    espaco2 = nome.rfind(' ') # procura o ultimo espaço
     
-    counter = nome.count(' ')
-    pos = 0
-    for i in range (1, counter):
-        pos = nome.find(' ', pos)
-        inicial = str(nome[pos+1]) + '. '
-        nomeStandard += inicial
-        pos += 1
+    primeiroNome = nome[0:espaco1] # primeiro nome é desde o inicio até ao primeiro espaço (exclusive)
+    ultimoNome = nome[espaco2+1:] # ultima nome é desde o ultimo espaço até ao fim (inclusive) (+1 para não ter espaços adicionais)
 
-    nomeStandard += ultimoNome
-    return nomeStandard
+    nomeStandard = primeiroNome + ' ' # começa a escrever o nome, começando por escrever o primeiro nome e um espaço
     
-nome = input('Insira um nome: ')
-print(standardName(nome))
+    counter = nome.count(' ') # conta o numero de espaços que tem
+    pos = 0 # posição inicial é 0
+    for i in range (1, counter): # repete um ciclo n vezes equivalente à quantidade de espaços na frase
+        pos = nome.find(' ', pos) # procura o primeiro espaço desde a posição 0
+        inicial = str(nome[pos+1]) + '. ' # inicial é igual à primeira letra apos o espaço mais um ponto
+        nomeStandard += inicial # adiciona a inicial ao nome
+        pos += 1 # avança para a posição seguinte
+
+    nomeStandard += ultimoNome # adiciona o ultimo nome à string
+    return nomeStandard # devolve
+    
+nome = input('Insira um nome: ') # recolhe o nome completo
+print(standardName(nome)) # imprime
