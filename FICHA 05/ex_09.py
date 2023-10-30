@@ -1,20 +1,20 @@
 def countWord(text, word):
     occurrences = 'Posições: '
-    count = 0
-    pos = 0
+    count = 0 # contagem de vezes que a palavra aparece
+    pos = 0 # posição inicial de onde começa a contar
 
     while True:
-        index = text.find(word, pos)
+        index = text.find(word, pos) # procura o index da palavra, desde o 0
 
-        if index == -1:
+        if index == -1: # se não existir, quebra
             break
 
-        if count > 0:
+        if count > 0: # adiciona se existir
             occurrences += ", "
 
-        occurrences += str(index)
-        count += 1
-        pos = index + 1
+        occurrences += str(index) # adiciona a posição da palavra na string
+        count += 1 
+        pos = index + 1 # volta a procurar desde a ultima palavra
 
     return count , occurrences
 
