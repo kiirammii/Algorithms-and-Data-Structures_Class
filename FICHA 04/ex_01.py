@@ -1,6 +1,6 @@
-
-
 def fibonacci(quantidade):
+    """esta função imprime n números pretendidos da sequência de fibonacci"""
+    
     antepenultimo = 0 #primeiro valor é 0
     penultimo = 1 #segundo é 1
     ultimoTermo = 0 #terceiro termo é 0, por enquanto
