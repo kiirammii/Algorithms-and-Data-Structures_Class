@@ -9,7 +9,7 @@ def countWord(text, word):
         if index == -1: # se não existir, quebra
             break
 
-        if count > 0: # adiciona se existir
+        if count > 0: # adiciona uma virgula se ja existir algo na string 
             occurrences += ", "
 
         occurrences += str(index) # adiciona a posição da palavra na string
