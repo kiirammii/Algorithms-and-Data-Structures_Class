@@ -17,7 +17,7 @@ def generatePassword(username):
             num = random.randint(1,9) # gera um numero aleatorio entre 1 e 9
             password = password + nameLetters[i] + str(num) # adiciona a letra da string e um numero aleatorio à password
 
-        password = password + str(len(password)) # adiciona o numero de caracteres do nome no fim da password
+        password = password + str(len(username)) # adiciona o numero de caracteres do nome no fim da password
         return password
 
 nome = input("insira um nome: ") # recolhe o nome

@@ -11,7 +11,7 @@ def standardName(nome):
     
     counter = nome.count(' ') # conta o numero de espaços que tem
     pos = 0 # posição inicial é 0
-    for i in range (1, counter): # repete um ciclo n vezes equivalente à quantidade de espaços na frase
+    for i in range (1, counter): # repete um ciclo n-1 vezes equivalente à quantidade de espaços na frase
         pos = nome.find(' ', pos) # procura o primeiro espaço desde a posição 0
         inicial = str(nome[pos+1]) + '. ' # inicial é igual à primeira letra apos o espaço mais um ponto
         nomeStandard += inicial # adiciona a inicial ao nome
