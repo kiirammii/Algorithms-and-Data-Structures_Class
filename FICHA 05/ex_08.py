@@ -3,7 +3,7 @@ def reverseWords(text):
 
     reversedText = '' # string vazia
 
-    for i in range (text.count(' ')+1): # ciclo repete tantas quanto espaços existentes
+    for i in range (text.count(' ')+1): # ciclo repete tantas vezes quanto espaços existentes
         pos = text.rfind(' ') # a partir do fim, procura o primeiro espaço
         word = text[pos+1:] # a primeira palavra do texto invertido vai ser desde o ultimo espaço até ao fim
         reversedText += word + ' ' # adiciona à string, junto de um espaço
