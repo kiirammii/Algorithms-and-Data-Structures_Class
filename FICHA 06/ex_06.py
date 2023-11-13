@@ -1,18 +1,16 @@
 def searchNumber(list, searchValue):
     
     positions = []
-    pos = 0
     
     for i in range (len(list)):
-        pos = list.index(searchNumber, pos)
-        positions.append(pos)
-        pos += 1
-        
+        if list[i] == searchValue:
+            positions.append(i)
+    
     return positions
         
 
 list = []
-for i in range (5):
+for i in range (10):
     num = int(input("insira um número: "))
     list.append(num)
 
