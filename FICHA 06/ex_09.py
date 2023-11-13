@@ -2,20 +2,28 @@ diasSemana = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 
 def numberOfVisitors(visitantes, dias):
 
-    visitantesCopy = visitantes.copy() # 8 3 6 2
+    visitantesCopy = visitantes.copy()
 
     visitantes.sort(reverse = True)
-    visitantesOrder = visitantes # 8 6 3 2
+    visitantesOrder = visitantes
 
-    lista = []
-
+    diasOrdenados = []
     for visitante in visitantesOrder:
         result = ''
         pos = visitantesCopy.index(visitante)
         result += str(dias[pos]) + ' - ' + str(visitantesCopy[pos])
-        lista.append(result)
+        diasOrdenados.append(result)
 
-    return '\n'.join(lista)
+    mediaValue = format((sum(visitantes) / len(dias)), '.2f')
+    media = '\n\n\n\t\tAverage Number of Visitors per Day: ' + mediaValue
+
+    numMaisProximo = min(visitantesCopy, key=lambda x: abs(x - float(mediaValue)))
+    indexMaisProximo = visitantesCopy.index(numMaisProximo)
+    diaMaisProximo = '\n\t\tClosest to Average: ' + str(dias[indexMaisProximo])
+
+    result = '\n\t' + '\n\t'.join(diasOrdenados) + media + diaMaisProximo
+
+    return result
 
 visitantes = []
 for dia in diasSemana:
@@ -24,5 +32,3 @@ for dia in diasSemana:
 
 print('------------------')
 print(numberOfVisitors(visitantes, diasSemana))
-
-print('\n\t\tvisitors per day: ', format((sum(visitantes) / len(diasSemana)), '.2f'))
