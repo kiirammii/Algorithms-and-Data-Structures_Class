@@ -1,0 +1,5 @@
+Portugal;Europa
+Espanha;Europa
+China;Asia
+Brasil;America
+Fran�a;Europa
